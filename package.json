@@ -1,0 +1,26 @@
+{
+  "name": "keith_mashup",
+  "version": "1.0.0",
+  "description": "A mashup of 3 APIs for class.",
+  "main": "mash.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keith66fuller/keith_mashup.git"
+  },
+  "author": "Keith Fuller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keith66fuller/keith_mashup/issues"
+  },
+  "homepage": "https://github.com/keith66fuller/keith_mashup#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "env": "0.0.2",
+    "inquirer": "^5.2.0",
+    "star-wars-quotes": "^1.0.2",
+    "translate": "^1.0.2"
+  }
+}
