@@ -1,4 +1,6 @@
-var inquirer  = require('inquirer');
+var inquirer = require('inquirer');
+inquirer.pageSize = 5;
+
 
 const quote   = require('star-wars-quotes');
 
@@ -13,6 +15,7 @@ xlate.key      = keys.apikey;
 getInput();
 
 function getInput() {
+    
     inquirer.prompt([
         {
             type: 'list',
@@ -29,27 +32,19 @@ function getInput() {
     ])
     .then(function(inquirerResponse) {
         if (inquirerResponse.initMsg == 'exit') process.exit();
-        mashup(inquirerResponse.initMsg)
-        getInput();
+        mashup(inquirerResponse.initMsg);
     })
     
 }
 
 
-function mashup(a) {
-    console.log(a)
-    console.log(quote())
-    
-    xlate(quote(), a).then(text => {
-        console.log(a)
-        console.log(text)
+function mashup(lang) {
+    for (var i =0; i<10; i++) console.log('\n');
+
+    xlate(q = quote(), lang).then(text => {
+        console.log(q);
+        console.log(text);
     })
 
 }
 
-function clearConsole() {
-    var lines = process.stdout.getWindowSize()[1];
-    for(var i = 0; i < lines; i++) {
-        console.log('\r\n');
-    }
-}
